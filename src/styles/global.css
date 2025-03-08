@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
+    --color-ultro: #e6002a;
+    
     --color-ultro-red-50: #fff0f3;
     --color-ultro-red-100: #ffdde3;
     --color-ultro-red-200: #ffc1cc;
@@ -8,7 +10,7 @@
     --color-ultro-red-400: #ff5977;
     --color-ultro-red-500: #ff264e;
     --color-ultro-red-600: #fc0633;
-    --color-ultro-red-700: #e6002a; /* Ultro's primary brand color */
+    --color-ultro-red-700: #e6002a;
     --color-ultro-red-800: #af0524;
     --color-ultro-red-900: #900c24;
     --color-ultro-red-950: #50000f;
