@@ -1,0 +1,26 @@
+---
+
+interface NavItem {
+    title: string;
+    href: string;
+}
+
+const navItems: NavItem[] = [
+    { title: "Home", href: "/" },
+    { title: "About", href: "/about" },
+    { title: "Outreach", href: "/services" },
+    { title: "Donate", href: "/donate" }
+];
+
+---
+
+<nav class="bg-gray-950 text-white h-20 flex items-center justify-center">
+    {navItems.map((item) => (
+        <a 
+            href={item.href} 
+            class={`px-4 py-2`}
+        >
+            {item.title}
+        </a>
+    ))}
+</nav>
