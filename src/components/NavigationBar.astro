@@ -1,21 +1,36 @@
 ---
+import ultroLogo from '../assets/ultroblack.png';
 
 interface NavItem {
     title: string;
     href: string;
 }
 
-const navItems: NavItem[] = [
-    { title: "Home", href: "/" },
+const leftNavItems: NavItem[] = [
     { title: "About", href: "/about" },
-    { title: "Outreach", href: "/services" },
+    { title: "Robots", href: "/robots" }
+];
+
+const rightNavItems: NavItem[] = [
+    { title: "Resources", href: "/resources" },
     { title: "Donate", href: "/donate" }
 ];
 
 ---
 
 <nav class="bg-gray-950 text-white h-20 flex items-center justify-center">
-    {navItems.map((item) => (
+    {leftNavItems.map((item) => (
+        <a 
+            href={item.href} 
+            class={`px-4 py-2`}
+        >
+            {item.title}
+        </a>
+    ))}
+    <div>
+        <img src={ultroLogo.src} class="h-18 px-4" alt="Astro Homepage" />
+    </div>
+    {rightNavItems.map((item) => (
         <a 
             href={item.href} 
             class={`px-4 py-2`}
