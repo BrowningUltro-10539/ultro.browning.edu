@@ -20,20 +20,20 @@ const rightNavItems: NavItem[] = [
 
 <nav class="bg-gray-950 text-white h-20 flex items-center justify-center">
     {leftNavItems.map((item) => (
-        <a 
+        <a  
             href={item.href} 
-            class={`px-4 py-2`}
+            class={`px-4 py-2 hover:text-gray-300`}
         >
             {item.title}
         </a>
     ))}
-    <div>
+    <a href="/">
         <img src={ultroLogo.src} class="h-18 px-4" alt="Astro Homepage" />
-    </div>
+    </a>
     {rightNavItems.map((item) => (
         <a 
             href={item.href} 
-            class={`px-4 py-2`}
+            class={`px-4 py-2 hover:text-gray-300`}
         >
             {item.title}
         </a>
