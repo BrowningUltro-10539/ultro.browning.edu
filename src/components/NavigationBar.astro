@@ -6,6 +6,9 @@ interface NavItem {
     href: string;
 }
 
+const navHeight = "h-20";
+const expandedHeight = "h-48";
+
 const leftNavItems: NavItem[] = [
     { title: "About", href: "/about" },
     { title: "Robots", href: "/robots" }
@@ -18,25 +21,28 @@ const rightNavItems: NavItem[] = [
 
 const currentPath = Astro.url.pathname;
 ---
-
-<nav class="bg-gray-950 text-white font-sans text-lg h-20 flex items-center justify-center">
-    {leftNavItems.map((item) => (
-        <a  
-            href={item.href} 
-            class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
-        >
-            {item.title}
-        </a>
-    ))}
+<nav class={`bg-gray-950 ${expandedHeight} flex justify-center`}>
+    <div class={`text-white font-sans text-lg ${navHeight} flex items-center justify-center`}>
+        {leftNavItems.map((item) => (
+            <a  
+                href={item.href} 
+                class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
+            >
+                {item.title}
+            </a>
+        ))}
+    </div>
     <a href="/">
-        <img src={ultroLogo.src} class="h-18 px-4" alt="Astro Homepage" />
+        <img src={ultroLogo.src} class={`${expandedHeight} px-4`} alt="Ultro Logo" />
     </a>
-    {rightNavItems.map((item) => (
-        <a 
-            href={item.href} 
-            class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
-        >
-            {item.title}
-        </a>
-    ))}
+    <div class={`text-white font-sans text-lg ${navHeight} flex items-center justify-center`}>
+        {rightNavItems.map((item) => (
+            <a 
+                href={item.href} 
+                class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
+            >
+                {item.title}
+            </a>
+        ))}
+    </div>
 </nav>
