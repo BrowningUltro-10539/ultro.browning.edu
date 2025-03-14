@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
+@import "@fontsource/metropolis";
+@import "@fontsource/space-mono";
+@import "@fontsource/atkinson-hyperlegible-next";
+
 @theme {
     --color-ultro: #e6002a;
-    
     --color-ultro-red-50: #fff0f3;
     --color-ultro-red-100: #ffdde3;
     --color-ultro-red-200: #ffc1cc;
@@ -14,4 +17,8 @@
     --color-ultro-red-800: #af0524;
     --color-ultro-red-900: #900c24;
     --color-ultro-red-950: #50000f;
+
+    --font-sans: 'Atkinson Hyperlegible Next', 'sans-serif';
+    --font-mono: 'Space Mono', 'monospace';
+    --font-display: 'Metropolis', 'sans-serif';
 }
