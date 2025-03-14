@@ -16,13 +16,14 @@ const rightNavItems: NavItem[] = [
     { title: "Donate", href: "/donate" }
 ];
 
+const currentPath = Astro.url.pathname;
 ---
 
-<nav class="bg-gray-950 text-white font-sans h-20 flex items-center justify-center">
+<nav class="bg-gray-950 text-white font-sans text-lg h-20 flex items-center justify-center">
     {leftNavItems.map((item) => (
         <a  
             href={item.href} 
-            class={`px-4 py-2 hover:text-gray-300`}
+            class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
         >
             {item.title}
         </a>
@@ -33,7 +34,7 @@ const rightNavItems: NavItem[] = [
     {rightNavItems.map((item) => (
         <a 
             href={item.href} 
-            class={`px-4 py-2 hover:text-gray-300`}
+            class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
         >
             {item.title}
         </a>
