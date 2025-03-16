@@ -1,11 +1,39 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Ultro Robotics" expandedNav=true>
-	<Welcome />
+<Layout title="Ultro Robotics" expandedNav="true">
+	<div
+		id="landing"
+		class="h-screen flex justify-center items-center bg-gradient-to-b from-black from-30% to-ultro-red-950 to-90%"
+	>
+		<p class="text-white">insert landing graphic here</p>
+	</div>
+	<div class="bg-ultro-red-950 h-96 flex justify-center items-center">
+		<section
+			id="about"
+			class="text-white text-2xl w-4/5 max-w-192 text-center space-y-8"
+		>
+			<p>
+				Team Ultro is a <strong><i>FIRST </i>Tech Challenge</strong> (FTC)
+				robotics team based in <a
+					href="https://browning.edu"
+					class="underline hover:text-gray-300">The Browning School</a
+				>, a New York City all-boys school. Our team name means "of its
+				own mind" in Latin and represents our focus on <strong
+					>student-led</strong
+				>, innovative designs, and high-performing autonomous projects.
+			</p>
+			<p>
+				Guided by mentors, our ultimate goal is to use FIRST Tech
+				Challenge-learned skills to <strong
+					>engineer for humanity.</strong>
+			</p>
+		</section>
+	</div>
+	<div class="bg-black h-144"></div>
 </Layout>
