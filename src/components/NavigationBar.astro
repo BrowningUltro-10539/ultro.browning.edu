@@ -82,8 +82,7 @@ const currentPath = Astro.url.pathname;
         const logoMin = parseInt(navbar?.dataset?.navheight ?? "20");
         const logoMax = parseInt(navbar?.dataset?.expandedheight ?? "48");
 
-        // im not sure if this varies across platforms, but this it what it seems to be for tailwind units
-        const scrollScale = 4;
+        const scrollScale = 0.25 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
         let ticking = false;
 
