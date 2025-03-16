@@ -1,48 +1,104 @@
 ---
-import ultroLogo from '../assets/ultroblack.png';
+import ultroLogo from "../assets/ultroblack.png";
 
 interface NavItem {
     title: string;
     href: string;
 }
 
-const navHeight = "h-20";
-const expandedHeight = "h-48";
+const navHeight = 20;
+const expandedHeight = 48;
+
+const tailwindNavHeight = `h-${navHeight.toString()}`;
+const tailwindExpandedHeight = `h-${expandedHeight.toString()}`;
 
 const leftNavItems: NavItem[] = [
     { title: "About", href: "/about" },
-    { title: "Robots", href: "/robots" }
+    { title: "Robots", href: "/robots" },
 ];
 
 const rightNavItems: NavItem[] = [
     { title: "Resources", href: "/resources" },
-    { title: "Donate", href: "/donate" }
+    { title: "Donate", href: "/donate" },
 ];
 
 const currentPath = Astro.url.pathname;
 ---
-<nav class={`bg-gray-950 ${expandedHeight} flex justify-center`}>
-    <div class={`text-white font-sans text-lg ${navHeight} flex items-center justify-center`}>
-        {leftNavItems.map((item) => (
-            <a  
-                href={item.href} 
-                class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
-            >
-                {item.title}
-            </a>
-        ))}
+
+<nav
+    id="fullnav"
+    data-heightmin={navHeight.toString()}
+    data-heightmax={expandedHeight.toString()}
+    class={`bg-gray-950 ${tailwindExpandedHeight} flex justify-center fixed inset-x-0 top-0 transition-all`}
+>
+    <div
+        class={`text-white font-sans text-lg ${tailwindNavHeight} flex items-center justify-center`}
+    >
+        {
+            leftNavItems.map((item) => (
+                <a
+                    href={item.href}
+                    class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
+                >
+                    {item.title}
+                </a>
+            ))
+        }
     </div>
-    <a href="/">
-        <img src={ultroLogo.src} class={`${expandedHeight} px-4`} alt="Ultro Logo" />
+    <a href="/" class="flex-none items-center">
+        <img
+            src={ultroLogo.src}
+            id="logo"
+            class={`${tailwindExpandedHeight} px-6 transition-all`}
+            alt="Ultro Logo"
+        />
     </a>
-    <div class={`text-white font-sans text-lg ${navHeight} flex items-center justify-center`}>
-        {rightNavItems.map((item) => (
-            <a 
-                href={item.href} 
-                class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
-            >
-                {item.title}
-            </a>
-        ))}
+    <div
+        class={`text-white font-sans text-lg ${tailwindNavHeight} flex items-center justify-center`}
+    >
+        {
+            rightNavItems.map((item) => (
+                <a
+                    href={item.href}
+                    class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
+                >
+                    {item.title}
+                </a>
+            ))
+        }
     </div>
 </nav>
+
+<script>
+    const navbar = document.getElementById("fullnav");
+    const logo = document.getElementById("logo");
+
+    // astro i just want to pass this from the frontmatter. please add feature
+    const logoMin = parseInt(navbar?.dataset?.heightmin ?? "20");
+    const logoMax = parseInt(navbar?.dataset?.heightmax ?? "48");
+
+    // im not sure if this varies across platforms, but this it what it seems to be for tailwind units
+    const scrollScale = 4;
+
+    let ticking = false;
+
+    window.addEventListener("scroll", () => {
+        // claude told me this ticking thing does something
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrollPosition = window.scrollY;
+                const logoSize = Math.max(
+                    logoMin * scrollScale,
+                    logoMax * scrollScale - scrollPosition,
+                );
+
+                // Set the height directly with inline styles
+                if (navbar) navbar.style.height = `${logoSize}px`;
+                if (logo) logo.style.height = `${logoSize}px`;
+                ticking = false;
+            });
+
+            ticking = true;
+        }
+    });
+</script>
