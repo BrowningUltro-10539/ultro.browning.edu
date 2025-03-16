@@ -15,7 +15,9 @@ const { title, expandedNav } = Astro.props;
 	</head>
 	<body>
 		<NavigationBar expandedNav={expandedNav}/>
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 
