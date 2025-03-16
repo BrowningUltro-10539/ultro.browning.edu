@@ -11,8 +11,13 @@ const { expandedNav = false } = Astro.props;
 const navHeight = 20;
 const expandedHeight = expandedNav ? 48 : 20;
 
-const tailwindNavHeight = `h-${navHeight.toString()}`;
-const tailwindExpandedHeight = `h-${expandedHeight.toString()}`;
+/*
+    PLEASE ASTRO FIX THIS
+    const tailwindNavHeight = `h-${navHeight.toString()}`;
+    const tailwindExpandedHeight = `h-${expandedHeight.toString()}`;
+*/
+const tailwindNavHeight = "h-20";
+const tailwindExpandedHeight = expandedNav ? "h-48" : "h-20";
 
 const leftNavItems: NavItem[] = [
     { title: "About", href: "/about" },
