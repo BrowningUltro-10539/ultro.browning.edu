@@ -6,8 +6,10 @@ interface NavItem {
     href: string;
 }
 
+const { expandedNav = false } = Astro.props;
+
 const navHeight = 20;
-const expandedHeight = 48;
+const expandedHeight = expandedNav ? 48 : 20;
 
 const tailwindNavHeight = `h-${navHeight.toString()}`;
 const tailwindExpandedHeight = `h-${expandedHeight.toString()}`;
@@ -27,8 +29,10 @@ const currentPath = Astro.url.pathname;
 
 <nav
     id="fullnav"
-    data-navheight={navHeight.toString()}
-    data-expandedheight={expandedHeight.toString()}
+    {...expandedNav && {
+        "data-navheight": navHeight.toString(),
+        "data-expandedheight": expandedHeight.toString()
+    }}
     class={`bg-gray-950 ${tailwindExpandedHeight} flex justify-center fixed inset-x-0 top-0 transition-all z-10`}
 >
     <div
@@ -69,36 +73,37 @@ const currentPath = Astro.url.pathname;
     </div>
 </nav>
 
-<script>
-    const navbar = document.getElementById("fullnav");
-    const logo = document.getElementById("logo");
+{expandedNav && (
+    <script>
+        const navbar = document.getElementById("fullnav");
+        const logo = document.getElementById("logo");
 
-    // astro i just want to pass this from the frontmatter. please add feature
-    const logoMin = parseInt(navbar?.dataset?.navheight ?? "20");
-    const logoMax = parseInt(navbar?.dataset?.expandedheight ?? "48");
+        // astro i just want to pass this from the frontmatter. please add feature
+        const logoMin = parseInt(navbar?.dataset?.navheight ?? "20");
+        const logoMax = parseInt(navbar?.dataset?.expandedheight ?? "48");
 
-    // im not sure if this varies across platforms, but this it what it seems to be for tailwind units
-    const scrollScale = 4;
+        // im not sure if this varies across platforms, but this it what it seems to be for tailwind units
+        const scrollScale = 4;
 
-    let ticking = false;
+        let ticking = false;
 
-    window.addEventListener("scroll", () => {
-        // claude told me this ticking thing does something
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                const scrollPosition = window.scrollY;
-                const logoSize = Math.max(
-                    logoMin * scrollScale,
-                    logoMax * scrollScale - scrollPosition,
-                );
+        window.addEventListener("scroll", () => {
+            // Sync animation with repaints
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollPosition = window.scrollY;
+                    const logoSize = Math.max(
+                        logoMin * scrollScale,
+                        logoMax * scrollScale - scrollPosition,
+                    );
 
-                // Set the height directly with inline styles
-                if (navbar) navbar.style.height = `${logoSize}px`;
-                if (logo) logo.style.height = `${logoSize}px`;
-                ticking = false;
-            });
+                    if (navbar) navbar.style.height = `${logoSize}px`;
+                    if (logo) logo.style.height = `${logoSize}px`;
+                    ticking = false;
+                });
 
-            ticking = true;
-        }
-    });
-</script>
+                ticking = true;
+            }
+        });
+    </script>
+)}
