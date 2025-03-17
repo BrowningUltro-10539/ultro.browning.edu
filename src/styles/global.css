@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-@import "@fontsource/metropolis";
+@import "@fontsource/metropolis/400.css";
+@import "@fontsource/metropolis/800.css";
 @import "@fontsource/space-mono";
 @import "@fontsource/atkinson-hyperlegible-next";
 
