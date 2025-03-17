@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Ultro Robotics" expandedNav="true">
@@ -12,26 +11,28 @@ import Layout from "../layouts/Layout.astro";
 	>
 		<p class="text-white">insert landing graphic here</p>
 	</div>
-	<div class="bg-ultro-red-950 h-96 flex justify-center items-center">
+	<div class="bg-radial-[at_50%_100%] from-ultro-red-900 to-ultro-red-950 to-65% p-10 flex flex-col justify-center items-center">
 		<section
 			id="about"
-			class="text-white text-2xl w-4/5 max-w-192 text-center space-y-8"
+			class="text-white text-lg w-4/5 max-w-192 text-center space-y-8"
 		>
+			<h1 class="text-5xl font-display font-extrabold">What is Ultro?</h1>
 			<p>
-				Team Ultro is a <strong><i>FIRST </i>Tech Challenge</strong> (FTC)
+				Team Ultro is a <strong>FIRST Tech Challenge</strong> (FTC)
 				robotics team based in <a
 					href="https://browning.edu"
 					class="underline hover:text-gray-300">The Browning School</a
 				>, a New York City all-boys school. Our team name means "of its
 				own mind" in Latin and represents our focus on <strong
 					>student-led</strong
-				>, innovative designs, and high-performing autonomous projects.
+				>, innovative designs and high-performing autonomous projects.
 			</p>
 			<p>
 				Guided by mentors, our ultimate goal is to use FIRST Tech
 				Challenge-learned skills to <strong
 					>engineer for humanity.</strong>
 			</p>
+			<Button text="ABOUT US" />
 		</section>
 	</div>
 	<div class="bg-black h-144"></div>
