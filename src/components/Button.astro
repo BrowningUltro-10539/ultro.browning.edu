@@ -2,9 +2,9 @@
 const { text, href } = Astro.props;
 ---
 
-<a href={href}>
+<a href={href} class="inline-block">
     <button
-        id="button" class="flex flex-row justify-self-center items-center border-3 font-mono transition-all border-ultro-red-600 bg-ultro-red-600 px-12 py-3 text-base text-white hover:bg-transparent focus:ring-3 focus:outline-hidden shadow-lg hover:shadow-none shadow-ultro-red-600/25"
+        id="button" class="flex flex-row justify-self-center items-center border-3 font-mono transition-all border-ultro-red-600 bg-ultro-red-600 px-12 py-3 text-base text-white hover:bg-transparent focus:ring-3 focus:outline-hidden shadow-lg hover:shadow-none shadow-ultro-red-600/25 w-full"
     >
         <div class="inline-block">{text}</div>
         <div id="icon" class="inline-block"></div>
