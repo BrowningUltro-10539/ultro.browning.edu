@@ -4,10 +4,14 @@ const { text, href } = Astro.props;
 
 <a href={href} class="inline-block">
     <button
-        id="button" class="flex flex-row justify-self-center items-center border-3 font-mono transition-all border-ultro-red-600 bg-ultro-red-600 px-12 py-3 text-base text-white hover:bg-transparent focus:ring-3 focus:outline-hidden shadow-lg hover:shadow-none shadow-ultro-red-600/25 w-full"
+        id="button" class="relative flex flex-row justify-center items-center border-3 font-mono transition-all border-ultro-red-600 bg-ultro-red-600 px-8 py-3 text-base text-white hover:bg-transparent focus:ring-3 focus:outline-hidden shadow-lg hover:shadow-none shadow-ultro-red-600/25 w-full"
     >
-        <div class="inline-block">{text}</div>
-        <div id="icon" class="inline-block"></div>
+        <div class="flex items-center justify-center transition-all duration-200">
+            <span class="inline-block transition-all duration-200">{text}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF" class="size-6 ml-0 transition-all duration-200 w-0 overflow-hidden" id="icon">
+                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/>
+            </svg>
+        </div>
     </button>
 </a>
 
@@ -16,12 +20,16 @@ const { text, href } = Astro.props;
     const icon = document.getElementById("icon");
 
     button?.addEventListener('mouseover', () => {
-        if (icon)
-            icon.innerHTML =
-                '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>';
+        if (icon) {
+            icon.classList.remove("w-0", "ml-0");
+            icon.classList.add("w-6", "ml-2");
+        }
     });
 
     button?.addEventListener('mouseout', () => {
-        if (icon) icon.innerHTML = "";
+        if (icon) {
+            icon.classList.add("w-0", "ml-0");
+            icon.classList.remove("w-6", "ml-2");
+        }
     });
 </script>
