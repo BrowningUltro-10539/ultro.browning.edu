@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
+import Marquee from "../components/Marquee.astro";
 ---
 
 <Layout title="Ultro Robotics" expandedNav="true">
@@ -36,5 +37,12 @@ import Button from "../components/Button.astro";
 			<Button text="ABOUT US" href="/about" />
 		</section>
 	</div>
-	<div class="bg-black h-144"></div>
+	<section>
+		<div class="bg-black">
+			<Marquee text={["OF ITS OWN MIND"]} />
+		</div>
+
+		<!-- Photo gallery of robots -->
+	</section>
+	<div class="bg-ultro-red-900 h-144"></div>
 </Layout>

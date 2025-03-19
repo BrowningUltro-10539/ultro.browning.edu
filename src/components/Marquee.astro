@@ -1,0 +1,11 @@
+---
+interface Props {
+    text: Array<string>;
+}
+
+const { text } = Astro.props;
+---
+
+<div class="overflow-x-hidden relative w-full h-fit">
+    {text.map((item) => <p class="absolute margin-0 text-center font-mono text-2xl">{item}</p>)}
+</div>
