@@ -38,7 +38,7 @@ const currentPath = Astro.url.pathname;
         "data-navheight": navHeight.toString(),
         "data-expandedheight": expandedHeight.toString()
     }}
-    class={`bg-black font-display font-medium ${tailwindExpandedHeight} flex justify-center fixed inset-x-0 top-0 transition-all duration-100 z-10`}
+    class={`bg-black font-display font-medium ${tailwindExpandedHeight} flex justify-center ${expandedNav ? "fixed inset-x-0" : "sticky"} top-0 transition-all duration-100 z-10`}
 >
     <div
         class={`text-white text-lg ${tailwindNavHeight} flex flex-1 items-center justify-end`}
