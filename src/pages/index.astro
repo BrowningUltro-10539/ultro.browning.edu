@@ -1,10 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
 import Marquee from "../components/Marquee.astro";
 ---
 
-<Layout title="Ultro Robotics" expandedNav="true">
+<BaseLayout title="Ultro Robotics" expandedNav="true">
 	<div
 		id="landing"
 		class="h-screen flex justify-center items-center bg-gradient-to-b from-black from-30% to-ultro-red-950 to-90%"
@@ -54,4 +54,4 @@ import Marquee from "../components/Marquee.astro";
 		</div>
 	</section>
 	<div class="bg-ultro-red-900 h-144"></div>
-</Layout>
+</BaseLayout>
