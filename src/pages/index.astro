@@ -38,9 +38,20 @@ import Marquee from "../components/Marquee.astro";
 		</section>
 	</div>
 	<section>
-		<Marquee text={["OF ITS OWN MIND"]} />
+		<Marquee text={["OF ITS OWN MIND (pretend this is scrolling)"]} classes="bg-black" />
 
-		<!-- Photo gallery of robots -->
+		<div class="bg-gradient-to-b from-black to-ultro-red-900 h-120 font-sans flex flex-col space-y-8 justify-center items-center text-white">
+			<div>insert photo gallery of working on robot</div>
+			<Button text="OUR ROBOTS" href="/robots" />
+		</div>
+	</section>
+	<section>
+		<Marquee text={["ENGINEERING FOR HUMANITY (pretend this is scrolling)"]} classes="bg-ultro-red-900" />
+
+		<div class="bg-black h-120 font-sans flex flex-col space-y-8 justify-center items-center text-white">
+			<div>insert photo gallery of outreach</div>
+			<Button text="OUTREACH" href="/outreach" />
+		</div>
 	</section>
 	<div class="bg-ultro-red-900 h-144"></div>
 </Layout>
