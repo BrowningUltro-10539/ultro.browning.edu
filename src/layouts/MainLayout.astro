@@ -1,0 +1,18 @@
+---
+import PageHeading from "../components/PageHeading.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+    title: string;
+    heading?: string;
+}
+
+const { title, heading = title.toUpperCase()} = Astro.props;
+---
+
+<BaseLayout title={title}>
+    <PageHeading heading={heading}>
+        <slot name="subtitle"/>
+    </PageHeading>
+    <slot />
+</BaseLayout>
