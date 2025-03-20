@@ -41,7 +41,7 @@ const currentPath = Astro.url.pathname;
     class={`bg-black font-display font-medium ${tailwindExpandedHeight} flex justify-center fixed inset-x-0 top-0 transition-all duration-100 z-10`}
 >
     <div
-        class={`text-white text-lg ${tailwindNavHeight} flex items-center justify-center`}
+        class={`text-white text-lg ${tailwindNavHeight} flex flex-1 items-center justify-end`}
     >
         {
             leftNavItems.map((item) => (
@@ -63,7 +63,7 @@ const currentPath = Astro.url.pathname;
         />
     </a>
     <div
-        class={`text-white text-lg ${tailwindNavHeight} flex items-center justify-center`}
+        class={`text-white text-lg ${tailwindNavHeight} flex flex-1 items-center justify-start`}
     >
         {
             rightNavItems.map((item) => (
