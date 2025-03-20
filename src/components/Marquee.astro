@@ -6,6 +6,17 @@ interface Props {
 const { text } = Astro.props;
 ---
 
-<div class="overflow-x-hidden relative w-full h-fit">
-    {text.map((item) => <p class="absolute margin-0 text-center font-mono text-2xl">{item}</p>)}
+<div class="relative overflow-hidden bg-black p-2">
+    <div class="flex marquee-content whitespace-nowrap items-center justify-center">
+        {
+            text.map((item) => (
+                <span class="font-mono text-3xl whitespace-preline text-white">
+                    {"· " + item + " ·"}
+                </span>
+            ))
+        }
+    </div>
 </div>
+
+<!-- For now, this will just be a heading before figuring out how to add interactivity. Maybe use a React component in the meantime? -->
+<!-- Also, figure out a noscript fallback - should it just be a heading, or a simplified, HTML/CSS-only version of the marquee? -->
