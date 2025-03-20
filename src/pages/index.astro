@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
 import Marquee from "../components/Marquee.astro";
+import Paragraph from "../components/Paragraph.astro";
 ---
 
 <BaseLayout title="Ultro Robotics" expandedNav="true">
@@ -16,24 +17,24 @@ import Marquee from "../components/Marquee.astro";
 	>
 		<section
 			id="about"
-			class="text-white text-base w-4/5 max-w-144 text-center space-y-8"
+			class="text-center w-4/5 max-w-144 space-y-8"
 		>
-			<h1 class="text-5xl font-display font-extrabold">What is Ultro?</h1>
-			<p>
+			<h1 class="text-white text-5xl font-display font-extrabold">What is Ultro?</h1>
+			<Paragraph>
 				Team Ultro (meaning "of its own mind") is a <strong
 					>FIRST Tech Challenge</strong
 				> (FTC) robotics team based in <a
 					href="https://browning.edu"
 					class="underline hover:text-gray-300">The Browning School</a
 				>, a New York City all-boys school.
-			</p>
-			<p>
+			</Paragaph>
+			<Paragraph>
 				With our <strong>student-led</strong>, innovative designs and
 				high-performing autonomous projects, our ultimate goal is to use
 				our FTC-learned skills to <strong class="whitespace-nowrap"
 					>engineer for humanity.</strong
 				>
-			</p>
+			</Paragraph>
 			<Button text="ABOUT US" href="/about" />
 		</section>
 	</div>
