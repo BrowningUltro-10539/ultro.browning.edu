@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 const { text, href } = Astro.props;
 ---
 
@@ -9,11 +11,10 @@ const { text, href } = Astro.props;
     >
         <div class="flex items-center justify-center transition-all duration-200">
             <span class="inline-block transition-all duration-200">{text}</span>
-            
-            <!-- Taken from Material Symbols -->
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF" class="size-6 ml-0 transition-all duration-200 w-0 overflow-hidden arrow-forward">
-                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/>
-            </svg>
+
+            <span class="size-6 ml-0 transition-all duration-200 w-0 overflow-hidden arrow-forward">
+                <Icon width=24 height=24 name="material-symbols:arrow-forward" />
+            </span>
         </div>
     </button>
 </a>
@@ -21,7 +22,7 @@ const { text, href } = Astro.props;
 <script>
     const button = document.querySelectorAll("button.button");
     button.forEach(button => {
-        const icon = button.querySelector("svg.arrow-forward");
+        const icon = button.querySelector("span.arrow-forward");
         button.addEventListener('mouseover', () => {
             if (icon) {
                 icon.classList.remove("w-0", "ml-0");
