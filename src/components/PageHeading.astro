@@ -1,0 +1,18 @@
+---
+import Paragraph from './Paragraph.astro';
+
+interface Props {
+    heading: string;
+}
+
+const { heading } = Astro.props;
+---
+
+<section class="py-24 bg-black flex flex-col items-center justify-center">
+    <div class="text-center w-4/5 max-w-144 space-y-8">
+        <h1 class="font-mono text-white text-8xl">
+            {heading}
+        </h1>
+        <slot />
+    </div>
+</section>
