@@ -1,18 +1,50 @@
 ---
-import Paragraph from '../components/Paragraph.astro';
-import Welcome from '../components/Welcome.astro';
-import MainLayout from '../layouts/MainLayout.astro';
+import Paragraph from "../components/Paragraph.astro";
+import Timeline, { type TimelineItem } from "../components/Timeline.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+const timeline: TimelineItem[] = [
+	{
+		date: "2015",
+		headline: "Rookie Season",
+		description:
+			"Browning Robotics kicks off its rookie season, FIRST RES-Q. We end up making it to the finals on our very first qualifier!",
+	},
+	{
+		date: "2016",
+		headline: "Ultro Robotics",
+		description:
+			"Browning Robotics gets renamed to Ultro - a testament to our student-driven, autonomous designs.",
+	},
+	{
+		date: "2017",
+		headline: "NYC Championships",
+		description:
+			"Ultro makes it to NYC Championships for the first time in our sophomore season, Velocity Vortex.",
+	},
+	{
+		date: "2020",
+		headline: "Worlds",
+		description:
+			"Ultro makes it through NYC Championships undefeated, winning Inspire 2nd and the Control Award. The FTC World Championship was unfortunately cancelled due to COVID-19.",
+	},
+	{
+		date: "2025",
+		headline: "10 Years",
+		description:
+			"To commemorate our 10-year anniversary, Ultro unveils a refreshed website and identity, and launches community team Ex Nihilo.",
+	},
+];
 ---
 
 <MainLayout title="About Us">
 	<Paragraph slot="subtitle">
 		Ultro began as Browning Robotics in 2015 when the founders, Robert, Ben,
-        and Gabe, won a robotics competition at Johns Hopkins. With this
-        momentum, we started FTC in 2015/2016 with FIRST RES-Q.
+		and Gabe, won a robotics competition at Johns Hopkins. With this
+		momentum, we started FTC in 2015/2016 with FIRST RES-Q.
 	</Paragraph>
+	<Timeline entries={timeline} />
 	<!-- 
-	<Timeline>
 	<Members>
 	-->
-	<Welcome />
 </MainLayout>
