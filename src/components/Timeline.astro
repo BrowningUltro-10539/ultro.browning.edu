@@ -26,7 +26,7 @@ const { entries } = Astro.props;
                 <div class={`${index % 2 === 0 ? "timeline-start" : "timeline-end"} ${index % 2 === 0 ? "mb-10 md:text-end" : "md:mb-10"}`}>
                     <time class="font-mono">{entry.date}</time>
                     <div class="text-lg font-bold font-display">{entry.headline}</div>
-                    <Paragraph>{entry.description}</Paragraph>
+                    <Paragraph set:html={entry.description} />
                 </div>
                 {index < entries.length - 1 && <hr />}
             </li>
