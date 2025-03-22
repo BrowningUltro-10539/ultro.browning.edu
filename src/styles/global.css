@@ -1,5 +1,8 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+    exclude: scrollbar, svg;
+}
+/* Could more be excluded? */
 
 @import "@fontsource/metropolis/500.css";
 @import "@fontsource/metropolis/800.css";
