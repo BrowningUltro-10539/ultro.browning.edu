@@ -7,17 +7,40 @@ interface Props {
 const { text, classes = "bg-black" } = Astro.props;
 ---
 
-<div class={`relative overflow-hidden p-2 ${classes}`}>
-    <div class="flex marquee-content whitespace-nowrap items-center justify-center">
+<div class={`flex overflow-hidden gap-2 relative select-none ${classes}`}>
+    <div class="scroll flex shrink-0 justify-around min-w-1/1 marquee-content gap-2">
         {
             text.map((item) => (
                 <span class="font-mono text-3xl whitespace-preline text-white">
-                    {"· " + item + " ·"}
+                    { item }
+                </span>
+            ))
+        }
+    </div>
+    <div class="scroll flex shrink-0 justify-around min-w-1/1 marquee-content gap-2">
+        {
+            text.map((item) => (
+                <span class="font-mono text-3xl whitespace-preline text-white">
+                    { item }
                 </span>
             ))
         }
     </div>
 </div>
 
-<!-- For now, this will just be a heading before figuring out how to add interactivity. Maybe use a React component in the meantime? -->
-<!-- Also, figure out a noscript fallback - should it just be a heading, or a simplified, HTML/CSS-only version of the marquee? -->
+<style>
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-100% - 0.5rem));
+        }
+    }
+
+    .scroll {
+        animation: scroll 10s linear infinite;
+    }
+</style>
+
+<!-- TODO: add client-side JS to automatically -->
