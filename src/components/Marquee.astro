@@ -60,25 +60,34 @@ const { text, classes = "bg-black" } = Astro.props;
             other fonts.
         */
         let marqueeElements = 1;
-        const combinedWidth =
-            [...element.querySelectorAll("div.marquee1 > span")].reduce(
-                (total, span) => total + span.getBoundingClientRect().width,
-                0,
-            );
+        const combinedWidth = [
+            ...element.querySelectorAll("div.marquee1 > span"),
+        ].reduce(
+            (total, span) => total + span.getBoundingClientRect().width,
+            0,
+        );
         console.log(combinedWidth);
         const initialContent = element.querySelector("div")?.innerHTML;
 
         function refreshElements() {
             let targetElements = Math.ceil(window.innerWidth / combinedWidth);
             const marqueeItems = element.querySelectorAll("div");
-            if (marqueeItems && initialContent && targetElements !== marqueeElements) {
-                marqueeItems.forEach((item) => item.innerHTML = initialContent.repeat(targetElements));
+            if (
+                marqueeItems &&
+                initialContent &&
+                targetElements !== marqueeElements
+            ) {
+                marqueeItems.forEach(
+                    (item) =>
+                        (item.innerHTML =
+                            initialContent.repeat(targetElements)),
+                );
             }
             // Equal case means do nothing.
         }
 
         // "Hydrate" on load
-        document.addEventListener('DOMContentLoaded', refreshElements);
+        document.addEventListener("DOMContentLoaded", refreshElements);
 
         // Update on resize
         window.addEventListener("resize", refreshElements);
