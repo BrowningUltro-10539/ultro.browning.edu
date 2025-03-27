@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-    exclude: scrollbar, svg;
+    exclude: scrollbar, svg, rootcolor;
 }
 /* Could more be excluded? */
 
