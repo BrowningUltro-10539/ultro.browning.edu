@@ -7,6 +7,8 @@ interface Props {
 const { text, classes = "bg-black" } = Astro.props;
 ---
 
+<!-- TODO: optimize DOM manipulation -->
+
 <div
     class={`marquee flex overflow-hidden gap-2 relative select-none ${classes}`}
 >
@@ -76,11 +78,10 @@ const { text, classes = "bg-black" } = Astro.props;
                 initialContent &&
                 targetElements !== marqueeElements
             ) {
-                marqueeItems.forEach(
-                    (item) =>
-                        (item.innerHTML =
-                            initialContent.repeat(targetElements)),
-                );
+                marqueeItems.forEach((item) => {
+                    item.innerHTML = initialContent.repeat(targetElements)
+                });
+                marqueeElements = targetElements;
             }
             // Equal case means do nothing.
         }
