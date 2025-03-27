@@ -31,5 +31,4 @@ Our website uses the [Astro](https://astro.build/) web framework, as well as [Ta
 - [ ] mobile support
 - [ ] View Transition API
 - [ ] accessibility: respect reduced motion, etc..
-
-- [ ] get it backwards compatible enough to run on a 2DS
+- [ ] ~~get it backwards compatible enough to run on a 2DS~~
