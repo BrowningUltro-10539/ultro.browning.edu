@@ -10,18 +10,18 @@
 @import "@fontsource/atkinson-hyperlegible-next";
 
 @theme {
-    --color-ultro: #e6002a;
-    --color-ultro-red-50: #fff0f3;
-    --color-ultro-red-100: #ffdde3;
-    --color-ultro-red-200: #ffc1cc;
-    --color-ultro-red-300: #ff95a8;
-    --color-ultro-red-400: #ff5977;
-    --color-ultro-red-500: #ff264e;
-    --color-ultro-red-600: #fc0633;
-    --color-ultro-red-700: #e6002a;
-    --color-ultro-red-800: #af0524;
-    --color-ultro-red-900: #900c24;
-    --color-ultro-red-950: #50000f;
+    --color-ultro: var(--color-ultro-red-600);
+    --color-ultro-red-50: oklch(97.1% 0.013 14.285);
+    --color-ultro-red-100: oklch(93.7% 0.03048 14.622);
+    --color-ultro-red-200: oklch(88.7% 0.05897 15.239);
+    --color-ultro-red-300: oklch(81.1% 0.10945 16.476);
+    --color-ultro-red-400: oklch(70.8% 0.18493 19.121);
+    --color-ultro-red-500: oklch(64.2% 0.22942 22.236);
+    --color-ultro-red-600: oklch(58.3% 0.2359 24.23);
+    --color-ultro-red-700: oklch(50.95% 0.20618 24.423);
+    --color-ultro-red-800: oklch(44.7% 0.17245 23.804);
+    --color-ultro-red-900: oklch(39.75% 0.13872 22.628);
+    --color-ultro-red-950: oklch(25.8% 0.092 22.947);
 
     --font-sans: 'Atkinson Hyperlegible Next', 'sans-serif';
     --font-mono: 'Space Mono', 'monospace';
