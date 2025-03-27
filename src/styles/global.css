@@ -34,18 +34,18 @@
     default: true;
     prefersdark: true;
     color-scheme: "dark";
-    --color-base-100: #900c24;
-    --color-base-200: #50000f;
-    --color-base-300: oklch(20% 0.092 26.042);
-    --color-base-content: oklch(97.807% 0.029 256.847);
+    --color-base-100: oklch(44.7% 0.17245 23.804);
+    --color-base-200: oklch(25.8% 0.092 22.947);
+    --color-base-300: oklch(39.75% 0.13872 22.628);
+    --color-base-content: oklch(100% 0 0);
     --color-primary: #e6002a;
-    --color-primary-content: oklch(96% 0.018 272.314);
+    --color-primary-content: oklch(0.971 0.013 14.285);
     --color-secondary: #af0524;
     --color-secondary-content: oklch(94% 0.028 342.258);
-    --color-accent: oklch(87% 0.01 258.338);
-    --color-accent-content: #50000f;
-    --color-neutral: #604043;
-    --color-neutral-content: oklch(92% 0.004 286.32);
+    --color-accent: oklch(88.7% 0.05897 15.239);
+    --color-accent-content: oklch(0.258 0.092 22.947);
+    --color-neutral: oklch(21% 0.006 56.043);
+    --color-neutral-content: oklch(98% 0.001 106.423);
     --color-info: oklch(74% 0.16 232.661);
     --color-info-content: oklch(29% 0.066 243.157);
     --color-success: oklch(76% 0.177 163.223);
@@ -56,11 +56,11 @@
     --color-error-content: oklch(27% 0.105 12.094);
     --radius-selector: 2rem;
     --radius-field: 0rem;
-    --radius-box: 0.5rem;
+    --radius-box: 0.25rem;
     --size-selector: 0.25rem;
     --size-field: 0.25rem;
     --border: 1px;
     --depth: 0;
     --noise: 0;
-  }
+}
   
