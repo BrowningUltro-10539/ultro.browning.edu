@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Button from "../components/Button.astro";
 import Marquee from "../components/Marquee.astro";
-import Paragraph from "../components/Paragraph.astro";
 ---
 
 <BaseLayout title="Ultro Robotics" expandedNav="true">
@@ -10,49 +8,6 @@ import Paragraph from "../components/Paragraph.astro";
 		id="landing"
 		class="h-screen flex justify-center items-center bg-gradient-to-b from-black from-30% to-ultro-red-950 to-90%"
 	>
-		<p class="text-white">insert landing graphic here</p>
+		<Marquee text={["COMING SOON", "·"]} />
 	</div>
-	<section
-		class="bg-radial-[at_50%_100%] from-ultro-red-900 to-ultro-red-950 to-65% p-10 flex justify-center items-center"
-	>
-		<div
-			id="about"
-			class="flex flex-col justify-center items-center text-center w-9/10 space-y-8"
-		>
-			<h2 class="text-white text-4xl font-display font-extrabold">What is Ultro?</h2>
-			<Paragraph>
-				Team Ultro (meaning "of its own mind") is a <strong
-					>FIRST Tech Challenge</strong
-				> (FTC) robotics team based in <a
-					href="https://browning.edu"
-					class="underline hover:text-gray-300">The Browning School</a
-				>, a New York City all-boys school.
-			</Paragaph>
-			<Paragraph>
-				With our <strong>student-led</strong>, innovative designs and
-				high-performing autonomous projects, our ultimate goal is to use
-				our FTC-learned skills to <strong class="whitespace-nowrap"
-					>engineer for humanity.</strong
-				>
-			</Paragraph>
-			<Button text="ABOUT US" href="/about" />
-		</div>
-	</section>
-	<section>
-		<Marquee text={["OF ITS OWN MIND", "·"]} classes="bg-black" />
-
-		<div class="bg-gradient-to-b from-black to-ultro-red-900 h-120 font-sans flex flex-col space-y-8 justify-center items-center text-white">
-			<div>insert photo gallery of working on robot</div>
-			<Button text="OUR ROBOTS" href="/robots" />
-		</div>
-	</section>
-	<section>
-		<Marquee text={["ENGINEERING FOR HUMANITY", "·"]} classes="bg-ultro-red-900" />
-
-		<div class="bg-black h-120 font-sans flex flex-col space-y-8 justify-center items-center text-white">
-			<div>insert photo gallery of outreach</div>
-			<Button text="OUTREACH" href="/outreach" />
-		</div>
-	</section>
-	<div class="bg-ultro-red-900 h-144"></div>
 </BaseLayout>
