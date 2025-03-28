@@ -1,6 +1,6 @@
 # Ultro Robotics Website
 
-This repository houses the in-development redesigned website for Ultro Robotics! Our legacy codebase can be found [here](https://github.com/BrowningUltro-10539/ultro.browning.edu-legacy).
+This repository houses the in-development redesigned website for Ultro Robotics! Our legacy codebase can be found [here](/public/old/).
 
 Our website uses the [Astro](https://astro.build/) web framework, as well as [Tailwind CSS](https://tailwindcss.com/) and [daisyUI](https://daisyui.com/) for styling.
 
