@@ -9,6 +9,8 @@ Our website uses the [Astro](https://astro.build/) web framework, as well as [Ta
 ```text
 /
 ├── public/
+│   ├── old/
+│   │   └── { old Ultro website }
 │   └── { non-processed public assets }
 ├── src/
 │   ├── assets/
