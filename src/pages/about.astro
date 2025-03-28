@@ -1,7 +1,14 @@
 ---
+import { Image } from "astro:assets";
 import Paragraph from "../components/Paragraph.astro";
 import Timeline, { type TimelineItem } from "../components/Timeline.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+
+import sendCutSendImage from "../assets/sponsors/SendCutSend.png";
+import edgeChemImage from "../assets/sponsors/EdgeChem.png";
+import goBildaImage from "../assets/sponsors/goBILDA.png";
+import maxBotixImage from "../assets/sponsors/MaxBotix.png";
+import servoCityImage from "../assets/sponsors/ServoCity.png";
 
 const timeline: TimelineItem[] = [
 	{
@@ -55,7 +62,7 @@ const timeline: TimelineItem[] = [
 		<h2 class="text-white text-4xl font-display font-extrabold m-4">
 			Sponsors
 		</h2>
-		<div class="max-w-9/10 text-center mb-10">
+		<div class="max-w-9/10 text-center mb-10 flex flex-col items-center justify-center">
 			<Paragraph className="mb-4">
 				Our affiliation with an all-boys independent school engenders a
 				misconception that we have unlimited resources and support.
@@ -66,6 +73,13 @@ const timeline: TimelineItem[] = [
 			<Paragraph className="mb-4">
 				Thank you to our past sponsors:
 			</Paragraph>
+			<div class="flex justify-center items-center w-90 gap-4">
+				<Image src={sendCutSendImage} alt="SendCutSend" class="min-w-24 max-w-1/5" />
+				<Image src={edgeChemImage} alt="EdgeChem" class="min-w-24 max-w-1/5" />
+				<Image src={goBildaImage} alt="goBILDA" class="min-w-24 max-w-1/5" />
+				<Image src={maxBotixImage} alt="MaxBotix" class="min-w-24 max-w-1/5" />
+				<Image src={servoCityImage} alt="ServoCity" class="min-w-24 max-w-1/5" />
+			</div>
 		</div>
 	</section>
 </MainLayout>
