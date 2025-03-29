@@ -1,6 +1,6 @@
 # Ultro Robotics Website
 
-This repository houses the in-development redesigned website for Ultro Robotics! Our legacy codebase can be found [here](/public/old/).
+This repository houses the in-development redesigned website for Ultro Robotics! Our legacy codebase is preserved character-for-character but is divided into two places: CSS and assets [here](/public/old/) and HTML [here](/src/pages/old/).
 
 Our website uses the [Astro](https://astro.build/) web framework, as well as [Tailwind CSS](https://tailwindcss.com/) and [daisyUI](https://daisyui.com/) for styling.
 
