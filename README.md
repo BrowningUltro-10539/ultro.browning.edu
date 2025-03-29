@@ -37,7 +37,7 @@ The code in this repository is licensed under the GNU General Public License v3.
 The image assets in this repository, located under `public/**` and `src/assets/*`, documentation, and/or other written content are licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), except for third-party assets hosted in `src/assets/sponsors`. See the [LICENSE-CC-BY-SA-4.0](LICENSE-CC-BY-SA-4.0) file for details.
 
 ## Copyright
-© 2025 Ultro Robotics
+Copyright © Ultro Robotics
 
 # TODO
 - [ ] finish building content pages
