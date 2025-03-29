@@ -46,12 +46,11 @@ const currentPath = Astro.url.pathname;
     >
         {
             leftNavItems.map((item) => (
-                <a
-                    href={item.href}
+                <p
                     class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
                 >
                     {item.title}
-                </a>
+                </p>
             ))
         }
     </div>
@@ -63,12 +62,11 @@ const currentPath = Astro.url.pathname;
     >
         {
             rightNavItems.map((item) => (
-                <a
-                    href={item.href}
+                <p
                     class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
                 >
                     {item.title}
-                </a>
+                </p>
             ))
         }
     </div>
