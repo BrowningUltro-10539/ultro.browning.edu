@@ -34,7 +34,7 @@ Our website uses the [Astro](https://astro.build/) web framework, as well as [Ta
 The code in this repository is licensed under the GNU General Public License v3.0 or later (GPL-3.0-or-later). See the [LICENSE](LICENSE) file for details.
 
 ### Assets
-The image assets in this repository, located under `public/old/images/**` and `src/assets/*`, are licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), except for third-party assets hosted in `src/assets/sponsors`. See the [LICENSE-CC-BY-SA-4.0](LICENSE-CC-BY-SA-4.0) file for details.
+The image assets in this repository, located under `public/**` and `src/assets/*`, are licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), except for third-party assets hosted in `src/assets/sponsors`. See the [LICENSE-CC-BY-SA-4.0](LICENSE-CC-BY-SA-4.0) file for details.
 
 ## Copyright
 © 2025 Ultro Robotics
