@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import ultroLogo from "../assets/ultroblack.png";
 
 interface NavItem {
@@ -55,12 +56,7 @@ const currentPath = Astro.url.pathname;
         }
     </div>
     <a href="/" class="flex-none items-center">
-        <img
-            src={ultroLogo.src}
-            id="logo"
-            class={`${tailwindExpandedHeight} px-6 transition-all`}
-            alt="Ultro Logo"
-        />
+        <Image src={ultroLogo} id="logo" class={`${tailwindExpandedHeight} w-auto px-6 transition-all`} loading="eager" alt="Ultro Logo" />
     </a>
     <div
         class={`text-white text-lg ${tailwindNavHeight} flex flex-1 items-center justify-start`}
