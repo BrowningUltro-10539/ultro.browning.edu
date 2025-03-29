@@ -2,7 +2,7 @@
 import NavigationBar from "../components/NavigationBar.astro";
 import "../styles/global.css";
 
-const { title, expandedNav } = Astro.props;
+const { title, expandedNav, description = "" } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -11,6 +11,7 @@ const { title, expandedNav } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
 	<body>
