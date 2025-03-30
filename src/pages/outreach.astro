@@ -2,6 +2,8 @@
 import Welcome from "../components/Welcome.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Paragraph from "../components/Paragraph.astro";
+import Card from "../components/Card.astro";
+import Link from "../components/Link.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -14,5 +16,44 @@ import Paragraph from "../components/Paragraph.astro";
 			class="whitespace-nowrap">engineer for humanity.</strong
 		>
 	</Paragraph>
-	<Welcome />
+	<section class="relative flex justify-center mt-16 w-full">
+		<div class="flex flex-wrap justify-center content-start gap-4 w-auto">
+			<Card title="Intro to Engineering">
+				<p slot="description">
+					We created the ongoing 10<sup>th</sup> Grade curriculum class
+					<em>Intro to Engineering</em> to acquaint sophomores with robotics,
+					as well as <strong
+						>increase interest in and visibility</strong
+					> of the sport.
+				</p>
+			</Card>
+			<Card title="FLL Mentoring">
+				<p slot="description">
+					We mentor FLL Team 65186 Panthers to teach them the
+					iterative design process, spark joy & nurture interest in
+					the FIRST sport of robotics.
+				</p>
+			</Card>
+			<Card title="Scrimmage">
+				<p slot="description">
+					Our annual scrimmage at The Browning School hosts teams
+					eager to collaborate, exchange ideas & expand learning.
+				</p>
+			</Card>
+			<Card title="FTC Collaboration">
+				<p slot="description">
+					For the 2024-25 season, Ultro team members mentored the
+					rookie team 22053 Liberty Robotics and collaborated with
+					all-girls 13334 Spence Light Sabers.
+				</p>
+			</Card>
+			<Card title="Ultro Robotics YouTube">
+				<p slot="description">
+					In response to the struggles and lack of resources faced by
+					developing teams, we collaborated with NYC FIRST to develop
+					a video series explaining challenging concepts. <Link href="https://www.youtube.com/@UltroRobotics">Visit our channel!</Link>
+				</p>
+			</Card>
+		</div>
+	</section>
 </MainLayout>
