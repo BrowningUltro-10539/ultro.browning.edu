@@ -5,12 +5,13 @@ import BaseLayout from "./BaseLayout.astro";
 interface Props {
     title: string;
     heading?: string;
+    description?: string;
 }
 
-const { title, heading = title.toUpperCase()} = Astro.props;
+const { title, heading = title.toUpperCase(), description = "" } = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
     <PageHeading heading={heading}>
         <slot name="subtitle"/>
     </PageHeading>
