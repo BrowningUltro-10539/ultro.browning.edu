@@ -47,4 +47,3 @@ Copyright © Ultro Robotics
 - [ ] mobile support
 - [ ] View Transition API
 - [ ] accessibility: respect reduced motion, etc..
-- [ ] ~~get it backwards compatible enough to run on a 2DS~~
