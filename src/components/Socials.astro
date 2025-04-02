@@ -9,7 +9,7 @@ interface Props {
 
 const { rotation, className } = Astro.props;
 ---
-<nav aria-label="Social media links" class=`flex text-gray-100 ${(rotation == "vertical") ? "flex-col" : ""} ${className}`>
+<nav aria-label="Social media links" class=`flex text-gray-100 bg-black/20 backdrop-blur-sm rounded-full border-2 border-gray-200/30 ${(rotation == "vertical") ? "flex-col" : ""} ${className}`>
     <a href="https://youtube.com/@UltroRobotics" class="m-4 hover:text-gray-400 transition-colors" aria-label="YouTube">
         <Icon name="simple-icons:youtube" width="2em" height="2em" />
     </a>
