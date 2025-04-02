@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import ultroLogo from "../assets/ultroblack.png";
 
 interface NavItem {
@@ -57,7 +57,7 @@ const currentPath = Astro.url.pathname;
     </div>
     <!-- TODO: when replacing with SVG remove -mt-[2px] -->
     <a href="/" class="flex-none items-center -mt-[2px]">
-        <Image src={ultroLogo} id="logo" class={`h-[calc(100%-2px)] w-auto px-6 transition-all`} loading="eager" alt="Ultro Logo" />
+        <Picture src={ultroLogo} id="logo" class={`h-[calc(100%-2px)] w-auto px-6 transition-all`} loading="eager" formats={['avif']} alt="Ultro Logo" />
     </a>
     <div
         class={`text-white text-lg ${tailwindNavHeight} flex flex-1 items-center justify-start`}
@@ -101,11 +101,11 @@ const currentPath = Astro.url.pathname;
                     if (navbar) navbar.style.height = `${logoSize}px`;
                     if (logo) logo.style.height = `${logoSize}px`;
                     if (logoMax * scrollScale - scrollPosition <= logoMin) {
-                        navbar.classList.add("border-b-2");
-                        navbar.classList.remove("border-b-0");
+                        navbar?.classList.add("border-b-2");
+                        navbar?.classList.remove("border-b-0");
                     } else {
-                        navbar.classList.add("border-b-0");
-                        navbar.classList.remove("border-b-2");
+                        navbar?.classList.add("border-b-0");
+                        navbar?.classList.remove("border-b-2");
                     }
                     ticking = false;
                 });
