@@ -39,7 +39,7 @@ const currentPath = Astro.url.pathname;
         "data-navheight": navHeight.toString(),
         "data-expandedheight": expandedHeight.toString()
     }}
-    class={`bg-black/40 font-display font-medium ${tailwindExpandedHeight} backdrop-blur-sm flex justify-center ${expandedNav ? "fixed inset-x-0 border-b-0" : "sticky border-b-2"} top-0 transition-all duration-100 z-10 border-b-gray-200/30`}
+    class={`bg-black/40 font-display font-medium ${tailwindExpandedHeight} backdrop-blur-sm flex justify-center ${expandedNav ? "fixed inset-x-0 border-b-black/40" : "sticky border-b-gray-200/30"} top-0 transition-all duration-100 z-10 border-b-2`}
 >
     <div
         class={`text-white text-lg ${tailwindNavHeight} flex flex-1 items-center justify-end`}
@@ -101,11 +101,11 @@ const currentPath = Astro.url.pathname;
                     if (navbar) navbar.style.height = `${logoSize}px`;
                     if (logo) logo.style.height = `${logoSize}px`;
                     if (logoMax * scrollScale - scrollPosition <= logoMin) {
-                        navbar?.classList.add("border-b-2");
-                        navbar?.classList.remove("border-b-0");
+                        navbar?.classList.add("border-b-gray-200/30");
+                        navbar?.classList.remove("bg-black/40");
                     } else {
-                        navbar?.classList.add("border-b-0");
-                        navbar?.classList.remove("border-b-2");
+                        navbar?.classList.add("bg-black/40");
+                        navbar?.classList.remove("border-b-gray-200/30");
                     }
                     ticking = false;
                 });
