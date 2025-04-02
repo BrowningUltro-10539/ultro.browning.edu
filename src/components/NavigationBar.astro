@@ -48,7 +48,7 @@ const currentPath = Astro.url.pathname;
             leftNavItems.map((item) => (
                 <a
                     href={item.href}
-                    class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300"}`}
+                    class={`px-6 py-4 ${currentPath === item.href ? "font-extrabold text-white" : "hover:text-gray-300 transition-colors"}`}
                 >
                     {item.title}
                 </a>
