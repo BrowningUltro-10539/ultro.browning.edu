@@ -4,14 +4,18 @@ import Button from "../components/Button.astro";
 import Marquee from "../components/Marquee.astro";
 import Paragraph from "../components/Paragraph.astro";
 import Link from "../components/Link.astro";
+import Socials from "../components/Socials.astro";
 ---
 
 <BaseLayout title="Ultro Robotics" expandedNav="true" description="The homepage for Ultro, the Browning School's premier FTC robotics team.">
 	<div
 		id="landing"
-		class="h-screen flex justify-center items-center bg-gradient-to-b from-black from-30% to-ultro-red-950 to-90%"
+		class="flex flex-col h-screen w-screen bg-gradient-to-b from-black from-30% to-ultro-red-950 to-90%"
 	>
-		<p class="text-white">insert landing graphic here</p>
+		<div class="flex items-center justify-center flex-grow">
+			<p class="text-white">insert landing graphic here</p>
+		</div>
+		<Socials rotation="vertical" className="absolute bottom-6 right-6"/>
 	</div>
 	<section
 		class="bg-radial-[at_50%_100%] from-ultro-red-900 to-ultro-red-950 to-65% p-10 flex justify-center items-center"

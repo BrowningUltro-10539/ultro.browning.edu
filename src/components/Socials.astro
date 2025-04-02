@@ -1,0 +1,22 @@
+---
+import { Icon } from "astro-icon/components";
+
+type AllowedStrings = "horizontal" | "vertical";
+interface Props {
+    rotation: AllowedStrings;
+    className?: string;
+}
+
+const { rotation, className } = Astro.props;
+---
+<nav aria-label="Social media links" class=`flex text-gray-100 ${(rotation == "vertical") ? "flex-col" : ""} ${className}`>
+    <a href="https://youtube.com/@UltroRobotics" class="m-4 hover:text-gray-400 transition-colors">
+        <Icon name="simple-icons:youtube" width="2em" height="2em" />
+    </a>
+    <a href="https://www.instagram.com/ultro_robotics10539/" class="m-4 hover:text-gray-400 transition-colors">
+        <Icon name="simple-icons:instagram" width="2em" height="2em" />
+    </a>
+    <a href="https://github.com/BrowningUltro-10539" class="m-4 hover:text-gray-400 transition-colors">
+        <Icon name="simple-icons:github" width="2em" height="2em" />
+    </a>
+</nav>
