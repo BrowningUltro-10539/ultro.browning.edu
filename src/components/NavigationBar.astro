@@ -100,7 +100,7 @@ const currentPath = Astro.url.pathname;
 
                     if (navbar) navbar.style.height = `${logoSize}px`;
                     if (logo) logo.style.height = `${logoSize}px`;
-                    if (logoMax * scrollScale - scrollPosition <= logoMin) {
+                    if (logoMax * scrollScale - scrollPosition <= logoMin * scrollScale) {
                         navbar?.classList.add("border-b-gray-200/30");
                         navbar?.classList.remove("bg-black/40");
                     } else {
