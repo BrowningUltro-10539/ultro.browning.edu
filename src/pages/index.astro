@@ -16,7 +16,7 @@ import landingGraphic from "../assets/robotics.webp"
 	>
 		<div class="flex items-center justify-center mt-48">
 			<!-- There's definitely a smarter way to do this but that's a problem for later -->
-			<Picture src={landingGraphic} alt="Landing graphic" class="h-[calc(100svh-12rem)] w-auto"/>
+			<Picture src={landingGraphic} alt="Landing graphic" loading="eager" formats={['avif']} class="h-[calc(100svh-12rem)] w-auto"/>
 		</div>
 		<Socials rotation="vertical" className="absolute bottom-6 right-6"/>
 	</div>
