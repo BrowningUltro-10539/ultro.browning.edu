@@ -11,7 +11,7 @@ interface Props {
 const { title, heading = title.toUpperCase(), description = "" } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title + " - Ultro Robotics"} description={description}>
     <PageHeading heading={heading}>
         <slot name="subtitle"/>
     </PageHeading>
