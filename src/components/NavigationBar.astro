@@ -78,9 +78,7 @@ const currentPath = Astro.url.pathname;
 {expandedNav && (
     <script>
         const navbar = document.getElementById("fullnav");
-        const logo = document.getElementById("logo");
 
-        // astro i just want to pass this from the frontmatter. please add feature
         const logoMin = parseInt(navbar?.dataset?.navheight ?? "20");
         const logoMax = parseInt(navbar?.dataset?.expandedheight ?? "48");
 
@@ -99,7 +97,6 @@ const currentPath = Astro.url.pathname;
                     );
 
                     if (navbar) navbar.style.height = `${logoSize}px`;
-                    if (logo) logo.style.height = `${logoSize}px`;
                     if (logoMax * scrollScale - scrollPosition <= logoMin * scrollScale) {
                         navbar?.classList.add("border-b-gray-200/30");
                         navbar?.classList.remove("bg-black/40");
