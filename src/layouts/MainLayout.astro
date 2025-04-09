@@ -6,13 +6,14 @@ interface Props {
     title: string;
     heading?: string;
     description?: string;
+    className?: string;
 }
 
-const { title, heading = title.toUpperCase(), description = "" } = Astro.props;
+const { title, heading = title.toUpperCase(), description = "", className } = Astro.props;
 ---
 
 <BaseLayout title={title + " - Ultro Robotics"} description={description}>
-    <PageHeading heading={heading}>
+    <PageHeading heading={heading} className={className}>
         <slot name="subtitle"/>
     </PageHeading>
     <slot />

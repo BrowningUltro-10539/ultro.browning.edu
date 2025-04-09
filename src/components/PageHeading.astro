@@ -4,7 +4,7 @@ interface Props {
     className?: string;
 }
 
-const { heading, className = "bg-black" } = Astro.props;
+const { heading, className } = Astro.props;
 ---
 
 <section class={`py-24 ${className} flex flex-col items-center justify-center`}>

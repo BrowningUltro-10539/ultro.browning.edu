@@ -2,14 +2,22 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Paragraph from "../components/Paragraph.astro";
 import Button from "../components/Button.astro";
+import Marquee from "../components/Marquee.astro";
+import { Image } from "astro:assets";
+
+import exNihiloHero from "../assets/exnihilohero.jpg"
 ---
 
 <MainLayout title="Ex Nihilo">
+	<figure slot="subtitle" class="-z-10 absolute top-0 left-0 w-full h-full">
+		<Image src={exNihiloHero} alt="" slot="subtitle" class="w-full h-full object-cover object-center brightness-20" />
+	</figure>
 	<Paragraph slot="subtitle">
 		Introducing Ex Nihilo, a brand-new, open community FTC robotics team.
 	</Paragraph>
+	<Marquee text={["TEAM 20254", "·", "\"FROM NOTHING\"", "·"]} />
 	<Button slot="subtitle" text="JOIN US"/>
-	<section class="flex flex-col items-center justify-center py-8 bg-radial-[at_50%_100%] from-ultro-red-900 to-ultro-red-950 to-65%">
+	<section class="flex flex-col items-center justify-center py-8 bg-radial-[at_50%_100%] from-ultro-red-900 to-black to-85%">
 		<h2 class="text-white text-4xl font-display font-extrabold m-4">
 			What is Ex Nihilo?
 		</h2>
