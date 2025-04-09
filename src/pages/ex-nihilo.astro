@@ -1,0 +1,36 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Paragraph from "../components/Paragraph.astro";
+import Button from "../components/Button.astro";
+---
+
+<MainLayout title="Ex Nihilo">
+	<Paragraph slot="subtitle">
+		Introducing Ex Nihilo, a brand-new, open community FTC robotics team.
+	</Paragraph>
+	<Button slot="subtitle" text="JOIN US"/>
+	<section class="flex flex-col items-center justify-center py-8 bg-radial-[at_50%_100%] from-ultro-red-900 to-ultro-red-950 to-65%">
+		<h2 class="text-white text-4xl font-display font-extrabold m-4">
+			What is Ex Nihilo?
+		</h2>
+		<p class="max-w-9/10 w-224 text-center">
+			Ex Nihilo is a new open-community robotics team being launched by
+			Ultro Robotics. At Ex Nihilo, you'll have access to Browning's
+			brand-new fabrication equipment, an extensive catalog of parts
+			spanning a decade of robotics, and collaboration with and mentorship
+			of Ultro.
+		</p>
+		<h3 class="text-white text-2xl font-mono m-4">
+			What are Ex Nihilo's goals?
+		</h3>
+		<p class="max-w-9/10 w-224 text-center">
+			At Ex Nihilo, we plan on building simple, effective designs
+		</p>
+		<h3 class="text-white text-2xl font-mono m-4">
+			Why did you launch Ex Nihilo?
+		</h3>
+		<p class="max-w-9/10 w-224 text-center">
+			Following Browning's expansion
+		</p>
+	</section>
+</MainLayout>
