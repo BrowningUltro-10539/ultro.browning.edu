@@ -5,40 +5,69 @@ import Button from "../components/Button.astro";
 import Marquee from "../components/Marquee.astro";
 import { Image } from "astro:assets";
 
-import exNihiloHero from "../assets/exnihilohero.jpg"
+import exNihiloHero from "../assets/exnihilohero.jpg";
 ---
 
 <MainLayout title="Ex Nihilo">
 	<figure slot="subtitle" class="-z-10 absolute top-0 left-0 w-full h-full">
-		<Image src={exNihiloHero} alt="" slot="subtitle" loading="eager" class="w-full h-full object-cover object-center brightness-20" />
+		<Image
+			src={exNihiloHero}
+			alt="Students in The Browning School's previous Tech Lab."
+			slot="subtitle"
+			loading="eager"
+			class="w-full h-full object-cover object-center brightness-30"
+		/>
 	</figure>
 	<Paragraph slot="subtitle">
 		Introducing Ex Nihilo, a brand-new, open community FTC robotics team.
 	</Paragraph>
-	<Marquee text={["TEAM 20254", "·", "\"FROM NOTHING\"", "·"]} />
-	<Button slot="subtitle" text="JOIN US"/>
-	<section class="flex flex-col items-center justify-center py-8 bg-radial-[at_50%_100%] from-ultro-red-900 to-black to-85%">
+	<Marquee text={["TEAM 20254", "·", '"FROM NOTHING"', "·"]} />
+	<Button slot="subtitle" text="JOIN US" href="https://docs.google.com/forms/d/e/1FAIpQLScDP07p6hY8JLLDER6yYc0aYAKBmeJmnxOW10It-Iu0EI2hZQ/viewform?usp=dialog" />
+	<section
+		class="flex flex-col items-center justify-center py-8 bg-radial-[at_50%_100%] from-ultro-red-900 to-ultro-red-950 to-80%"
+	>
 		<h2 class="text-white text-4xl font-display font-extrabold m-4">
 			What is Ex Nihilo?
 		</h2>
-		<p class="max-w-9/10 w-224 text-center">
-			Ex Nihilo is a new open-community robotics team being launched by
-			Ultro Robotics. At Ex Nihilo, you'll have access to Browning's
-			brand-new fabrication equipment, an extensive catalog of parts
-			spanning a decade of robotics, and collaboration with and mentorship
-			of Ultro.
+		<p class="max-w-9/10 w-192 text-center">
+			Ex Nihilo is an open community robotics team being launched by Ultro
+			Robotics for the 2025-26 season. At Ex Nihilo, you'll have access to
+			Browning's brand-new fabrication equipment, an extensive catalog of
+			parts spanning a decade of robotics, and collaboration with and
+			mentorship of Ultro.
 		</p>
-		<h3 class="text-white text-2xl font-mono m-4">
-			What are Ex Nihilo's goals?
+		<h3 class="text-white text-2xl font-mono m-4 mt-8">
+			WHAT ARE EX NIHILO'S GOALS?
 		</h3>
-		<p class="max-w-9/10 w-224 text-center">
-			At Ex Nihilo, we plan on building simple, effective designs
+		<p class="max-w-9/10 w-192 text-center">
+			At Ex Nihilo, we plan on building simple, efficient, and effective
+			designs that utilize the resources we have to their maximum
+			potential. We treat every member as valuable, regardless of
+			experience, and want our resources to enable <strong
+				>everyone</strong
+			> to <strong>succeed in STEM.</strong>
 		</p>
-		<h3 class="text-white text-2xl font-mono m-4">
-			Why did you launch Ex Nihilo?
+		<h3 class="text-white text-2xl font-mono m-4 mt-8">
+			WHY DID YOU LAUNCH EX NIHILO?
 		</h3>
-		<p class="max-w-9/10 w-224 text-center">
-			Following Browning's expansion
+		<p class="max-w-9/10 w-192 text-center">
+			Following Browning's Upper School expansion, we decided to split
+			Ultro into two teams to accommodate our increasing size. In
+			addition, with Ex Nihilo, we are able to share our expertise with
+			more people.
 		</p>
+		<h2 class="text-white text-4xl font-display font-extrabold m-4 mt-12">
+			Scheduling
+		</h2>
+		<p class="max-w-9/10 w-192 text-center">
+			<strong>Weekdays:</strong> TBD at The Browning School (337 East 64th Street)
+		</p>
+		<p class="max-w-9/10 w-192 text-center">
+			<strong>Weekends:</strong> TBD at NYC FIRST STEM Center @ Cornell Tech (?)
+		</p>
+		<h2 class="text-white text-4xl font-mono font-bold m-4 mt-20 mb-8">
+			READY TO JOIN?
+		</h2>
+		<Button slot="subtitle" text="JOIN US" href="https://docs.google.com/forms/d/e/1FAIpQLScDP07p6hY8JLLDER6yYc0aYAKBmeJmnxOW10It-Iu0EI2hZQ/viewform?usp=dialog" />
 	</section>
 </MainLayout>
