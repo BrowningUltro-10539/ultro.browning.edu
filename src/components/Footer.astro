@@ -5,7 +5,7 @@ import browningFooter from "../assets/browning_footer.png";
 import ultroSmall from "../assets/ultrosmall.png";
 import Image from "astro/components/Image.astro";
 ---
-<footer class="footer sm:footer-horizontal bg-black text-black-content items-center px-4">
+<footer class="footer sm:footer-horizontal bg-black text-black-content items-center px-4 border-t-2 border-gray-200/30">
     <aside class="grid-flow-col items-center">
       <Image src={ultroSmall} alt="Ultro icon" class="h-16 w-16" />
       <p class="font-mono p-2 pl-4 m-4 border-l-2 border-white h-min">337 EAST 64TH STREET<br>NEW YORK, NY 10065</p>
@@ -28,6 +28,6 @@ import Image from "astro/components/Image.astro";
       <p class="text-sm">
         Ultro Robotics is the Browning School's premier FTC robotics team.
       </p>
-      <p class="text-sm">This website is <Link href="https://github.com/BrowningUltro-10539/ultro.browning.edu">open source!</Link></p>
+      <p class="text-sm">This website is <Link href="https://github.com/BrowningUltro-10539/ultro.browning.edu" external={true}>open source!</Link></p>
     </aside>
 </footer>

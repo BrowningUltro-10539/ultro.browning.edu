@@ -6,19 +6,29 @@ import Paragraph from "../components/Paragraph.astro";
 import Link from "../components/Link.astro";
 import Socials from "../components/Socials.astro";
 import Picture from "astro/components/Picture.astro";
-import landingGraphic from "../assets/robotics.webp"
+import landingGraphic from "../assets/robotics.webp";
 ---
 
-<BaseLayout title="Ultro Robotics" expandedNav="true" description="The homepage for Ultro, the Browning School's premier FTC robotics team.">
+<BaseLayout
+	title="Ultro Robotics"
+	expandedNav="true"
+	description="The homepage for Ultro, the Browning School's premier FTC robotics team."
+>
 	<div
 		id="landing"
 		class="flex flex-col h-dvh w-dvw bg-gradient-to-b from-black from-30% to-ultro-red-950 to-90%"
 	>
 		<div class="flex items-center justify-center mt-48">
 			<!-- There's definitely a smarter way to do this but that's a problem for later -->
-			<Picture src={landingGraphic} alt="Landing graphic" loading="eager" formats={['avif']} class="h-[calc(100svh-12rem)] w-auto"/>
+			<Picture
+				src={landingGraphic}
+				alt="Landing graphic"
+				loading="eager"
+				formats={["avif"]}
+				class="h-[calc(100svh-12rem)] w-auto"
+			/>
 		</div>
-		<Socials rotation="vertical" className="absolute bottom-6 right-6"/>
+		<Socials rotation="vertical" className="absolute bottom-6 right-6" />
 	</div>
 	<section
 		class="bg-radial-[at_50%_100%] from-ultro-red-900 to-ultro-red-950 to-65% p-10 flex justify-center items-center"
@@ -33,8 +43,9 @@ import landingGraphic from "../assets/robotics.webp"
 			<Paragraph>
 				Team Ultro (meaning "of its own mind") is a <strong
 					>FIRST Tech Challenge</strong
-				> (FTC) robotics team based in <Link href="https://browning.edu"
-					>The Browning School</Link
+				> (FTC) robotics team based in <Link
+					href="https://browning.edu"
+					external={true}>The Browning School</Link
 				>, a New York City all-boys school.
 			</Paragraph>
 			<Paragraph>
