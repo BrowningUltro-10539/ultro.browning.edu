@@ -1,5 +1,5 @@
 ---
-import Welcome from "../components/Welcome.astro";
+import Marquee from "../components/Marquee.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Paragraph from "../components/Paragraph.astro";
 import Card from "../components/Card.astro";
@@ -16,7 +16,8 @@ import Link from "../components/Link.astro";
 			class="whitespace-nowrap">engineer for humanity.</strong
 		>
 	</Paragraph>
-	<section class="relative flex justify-center mt-16 w-full">
+	<Marquee text={["IN CONSTRUCTION", "·"]} />
+	<section class="relative flex justify-center my-16 w-full">
 		<div class="flex flex-wrap justify-center content-start gap-4 w-auto">
 			<Card title="Intro to Engineering">
 				<p slot="description">

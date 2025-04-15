@@ -19,14 +19,7 @@ import landingGraphic from "../assets/robotics.webp";
 		class="flex flex-col h-dvh w-dvw bg-gradient-to-b from-black from-30% to-ultro-red-950 to-90%"
 	>
 		<div class="flex items-center justify-center mt-48">
-			<!-- There's definitely a smarter way to do this but that's a problem for later -->
-			<Picture
-				src={landingGraphic}
-				alt="Landing graphic"
-				loading="eager"
-				formats={["avif"]}
-				class="h-[calc(100svh-12rem)] w-auto"
-			/>
+			<Marquee text={["IN CONSTRUCTION", "·"]} classes="mt-48" />
 		</div>
 		<Socials rotation="vertical" className="absolute bottom-6 right-6" />
 	</div>
@@ -56,29 +49,6 @@ import landingGraphic from "../assets/robotics.webp";
 				>
 			</Paragraph>
 			<Button text="ABOUT US" href="/about/" />
-		</div>
-	</section>
-	<section>
-		<Marquee text={["OF ITS OWN MIND", "·"]} classes="bg-black" />
-
-		<div
-			class="bg-gradient-to-b from-black to-ultro-red-900 h-120 font-sans flex flex-col space-y-8 justify-center items-center text-white"
-		>
-			<div>insert photo gallery of working on robot</div>
-			<Button text="OUR ROBOTS" href="/robots/" />
-		</div>
-	</section>
-	<section>
-		<Marquee
-			text={["ENGINEERING FOR HUMANITY", "·"]}
-			classes="bg-ultro-red-900"
-		/>
-
-		<div
-			class="bg-black h-120 font-sans flex flex-col space-y-8 justify-center items-center text-white"
-		>
-			<div>insert photo gallery of outreach</div>
-			<Button text="OUTREACH" href="/outreach/" />
 		</div>
 	</section>
 </BaseLayout>

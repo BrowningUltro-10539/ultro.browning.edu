@@ -1,5 +1,5 @@
 ---
-import Carousel from '../components/Carousel.astro';
+import Marquee from '../components/Marquee.astro';
 import MainLayout from '../layouts/MainLayout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -8,8 +8,6 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 <MainLayout title="Robots">
 	<section class="flex items-center justify-center h-96">
-		<div class="w-144">
-			<Carousel />
-		</div>
+		<Marquee text={["IN CONSTRUCTION", "·"]} />
 	</section>
 </MainLayout>
