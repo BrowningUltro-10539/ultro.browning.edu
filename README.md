@@ -41,7 +41,7 @@ Copyright © Ultro Robotics
 
 # TODO
 - [ ] finish building content pages
-- [ ] convert navbar to use CSS Transitions instead of JS
+- [ ] convert navbar to use CSS scroll-driven animations instead of JS
 - [ ] footer
 - [ ] replace logos with transparent SVG assets
 - [ ] mobile support
