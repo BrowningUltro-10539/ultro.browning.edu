@@ -6,17 +6,27 @@ import icon from "astro-icon";
 
 import sitemap from "@astrojs/sitemap";
 
+
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultro.browning.edu",
-  
+
   vite: {
     plugins: [tailwindcss()],
   },
 
   prefetch: {
-    prefetchAll: true
+    prefetchAll: true,
   },
 
-  integrations: [icon(), sitemap()]
+  integrations: [
+    icon(),
+    sitemap(),
+    (await import("@playform/compress")).default({
+      Exclude: [
+        (File: string) => File.includes("dist/old/"), // Excluded for preservation purposes
+      ],
+    }),
+  ],
 });
