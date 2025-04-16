@@ -24,6 +24,7 @@ export default defineConfig({
     icon(),
     sitemap(),
     (await import("@playform/compress")).default({
+      Image: false, // has issues with Deno (until it magically works), TODO find way to reproduce issue
       Exclude: [
         (File: string) => File.includes("dist/old/"), // Excluded for preservation purposes
       ],
