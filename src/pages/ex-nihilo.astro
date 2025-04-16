@@ -6,9 +6,10 @@ import Marquee from "../components/Marquee.astro";
 import { Image } from "astro:assets";
 
 import exNihiloHero from "../assets/exnihilohero.jpg";
+import exNihiloLogo from "../assets/exnihilologo.png";
 ---
 
-<MainLayout title="Ex Nihilo">
+<MainLayout title="Ex Nihilo" heading="">
 	<figure slot="subtitle" class="-z-10 absolute top-0 left-0 w-full h-full">
 		<Image
 			src={exNihiloHero}
@@ -18,7 +19,13 @@ import exNihiloHero from "../assets/exnihilohero.jpg";
 			class="w-full h-full object-cover object-center brightness-30"
 		/>
 	</figure>
-	<Paragraph slot="subtitle">
+	<Image
+		src={exNihiloLogo}
+		alt="Ex Nihilo Logo"
+		slot="subtitle"
+		class="-m-2"
+		loading="eager" />
+	<Paragraph slot="subtitle" className="mb-12">
 		Introducing Ex Nihilo, a brand-new, open community FTC robotics team.
 	</Paragraph>
 	<Marquee text={["TEAM 20254", "·", '"FROM NOTHING"', "·"]} />
