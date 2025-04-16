@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 import icon from "astro-icon";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://ultro.browning.edu",
@@ -16,5 +18,5 @@ export default defineConfig({
     prefetchAll: true
   },
 
-  integrations: [icon()]
+  integrations: [icon(), sitemap()]
 });
