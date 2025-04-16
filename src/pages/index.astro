@@ -7,6 +7,14 @@ import Link from "../components/Link.astro";
 import Socials from "../components/Socials.astro";
 import Picture from "astro/components/Picture.astro";
 import landingGraphic from "../assets/robotics.webp";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Ultro Robotics",
+  alternateName: ["10539 Ultro", "Ultro", "ultro.browning.edu"],
+  url: Astro.site,
+}
 ---
 
 <BaseLayout
@@ -14,6 +22,7 @@ import landingGraphic from "../assets/robotics.webp";
 	expandedNav="true"
 	description="The homepage for Ultro, the Browning School's premier FTC robotics team."
 >
+	<script type="application/ld+json" slot="head" set:html={JSON.stringify(structuredData)} />
 	<div
 		id="landing"
 		class="flex flex-col h-dvh w-dvw bg-gradient-to-b from-black from-30% to-ultro-red-950 to-90%"
