@@ -42,8 +42,12 @@ Copyright © Ultro Robotics
 # TODO
 - [ ] finish building content pages
 - [ ] convert navbar to use CSS scroll-driven animations instead of JS
-- [ ] footer
+- [x] footer
 - [ ] replace logos with transparent SVG assets
 - [ ] mobile support
 - [ ] View Transition API
 - [ ] accessibility: respect reduced motion, etc..
+- [ ] make this website as fast as humanly possible
+  - [ ] optimize css, js bundles
+  - [ ] inline critical css (see [@playform/inline](https://github.com/PlayForm/Inline)
+  - [ ] preload fonts
