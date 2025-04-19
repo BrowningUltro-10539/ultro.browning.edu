@@ -15,13 +15,13 @@
     "npm:@fontsource/atkinson-hyperlegible-next@^5.2.1": "5.2.2",
     "npm:@fontsource/metropolis@^5.2.5": "5.2.5",
     "npm:@fontsource/space-mono@^5.2.5": "5.2.5",
-    "npm:@iconify-json/material-symbols@^1.2.19": "1.2.19",
+    "npm:@iconify-json/material-symbols@^1.2.20": "1.2.20",
     "npm:@iconify-json/simple-icons@^1.2.32": "1.2.32",
     "npm:@playform/compress@~0.1.9": "0.1.9_lightningcss@1.29.3_terser@5.39.0",
     "npm:@tailwindcss/vite@^4.1.4": "4.1.4_vite@6.3.0__picomatch@4.0.2",
     "npm:astro-icon@^1.1.5": "1.1.5",
-    "npm:astro@^5.7.2": "5.7.2_vite@6.3.0__picomatch@4.0.2_zod@3.24.2",
-    "npm:daisyui@^5.0.23": "5.0.23",
+    "npm:astro@^5.7.4": "5.7.4_vite@6.3.0__lightningcss@1.29.3__terser@5.39.0__picomatch@4.0.2_zod@3.24.2",
+    "npm:daisyui@^5.0.27": "5.0.27",
     "npm:sharp@~0.34.1": "0.34.1",
     "npm:tailwindcss@^4.1.4": "4.1.4"
   },
@@ -263,8 +263,8 @@
     "@fontsource/space-mono@5.2.5": {
       "integrity": "sha512-yFU6K17ko4LEDHl5554n6mCrmDbuc2xYGCZZkCRpAvRtCaJisUjxFdDdph2d2hiIElaiMlinmkmV8IWlbQCMJA=="
     },
-    "@iconify-json/material-symbols@1.2.19": {
-      "integrity": "sha512-GpAfK2XabulPR6Q8NTMDhuLX/PcBEjOmhgKDA1sK59hrrztqm3rPi5Dq4Md01z+j3lVrOa2l7hxgNX1LWKzHVg==",
+    "@iconify-json/material-symbols@1.2.20": {
+      "integrity": "sha512-+KqOT+3fD+LC2FbWiV8gd4+JLMiVUtmqrjzpKN1ji7rfMQTwvYJ94RT0WQlmL+vfDNJ5MTRe3rBzzJyvIH/aSg==",
       "dependencies": [
         "@iconify/types"
       ]
@@ -964,8 +964,8 @@
         "zod-to-ts"
       ]
     },
-    "astro@5.7.2_vite@6.3.0__picomatch@4.0.2_zod@3.24.2": {
-      "integrity": "sha512-h/+MjrirU2xT+khkxvwPxE7c1O4nxzVtuSnGIqx+3dtrmUoxJvnNeIBnO7ED0mWzo6ClZ4aVBQj63M7U47anLg==",
+    "astro@5.7.4_vite@6.3.0__lightningcss@1.29.3__terser@5.39.0__picomatch@4.0.2_zod@3.24.2": {
+      "integrity": "sha512-h+pndGOyoYbsBd0YvP7bL3gotUSlyltp8OLpcYg062w0n5c96wJ9xt/RmwwXzGbdcUjWFtw0c5z4zCA92NDmlA==",
       "dependencies": [
         "@astrojs/compiler",
         "@astrojs/internal-helpers",
@@ -1019,8 +1019,8 @@
         "unist-util-visit",
         "unstorage",
         "vfile",
-        "vite@6.3.0_picomatch@4.0.2_lightningcss@1.29.3_terser@5.39.0",
-        "vitefu@1.0.6_vite@6.3.0__picomatch@4.0.2",
+        "vite@6.3.0_lightningcss@1.29.3_terser@5.39.0_picomatch@4.0.2",
+        "vitefu@1.0.6_vite@6.3.0__lightningcss@1.29.3__terser@5.39.0__picomatch@4.0.2",
         "xxhash-wasm",
         "yargs-parser",
         "yocto-spinner",
@@ -1289,8 +1289,8 @@
         "css-tree@2.2.1"
       ]
     },
-    "daisyui@5.0.23": {
-      "integrity": "sha512-SIR8yAneeNxvrpaR5kREG1DrPK8XFyfmyvqyZEUTJ2e6tv4Pp56/w+52Vdv34hmSmtAyDldTCEPWx+GvPyp0Yg=="
+    "daisyui@5.0.27": {
+      "integrity": "sha512-XrpqgfpGaZJvTPg9pS9Rq6xbYpmMnR0a7AKqyVPZceJzjAs5HH3rfkRkiuGin0+KC2Adnu+WLHU7UDxAtCMyAw=="
     },
     "debug@4.4.0": {
       "integrity": "sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==",
@@ -3246,16 +3246,16 @@
         "tinyglobby"
       ]
     },
-    "vitefu@1.0.6_vite@6.3.0__lightningcss@1.29.3__terser@5.39.0__picomatch@4.0.2_lightningcss@1.29.3_terser@5.39.0": {
+    "vitefu@1.0.6_vite@6.3.0__lightningcss@1.29.3__terser@5.39.0__picomatch@4.0.2": {
       "integrity": "sha512-+Rex1GlappUyNN6UfwbVZne/9cYC4+R2XDk9xkNXBKMw6HQagdX9PgZ8V2v1WUSK1wfBLp7qbI1+XSNIlB1xmA==",
       "dependencies": [
         "vite@6.3.0_lightningcss@1.29.3_terser@5.39.0_picomatch@4.0.2"
       ]
     },
-    "vitefu@1.0.6_vite@6.3.0__picomatch@4.0.2": {
+    "vitefu@1.0.6_vite@6.3.0__lightningcss@1.29.3__terser@5.39.0__picomatch@4.0.2_lightningcss@1.29.3_terser@5.39.0": {
       "integrity": "sha512-+Rex1GlappUyNN6UfwbVZne/9cYC4+R2XDk9xkNXBKMw6HQagdX9PgZ8V2v1WUSK1wfBLp7qbI1+XSNIlB1xmA==",
       "dependencies": [
-        "vite@6.3.0_picomatch@4.0.2_lightningcss@1.29.3_terser@5.39.0"
+        "vite@6.3.0_lightningcss@1.29.3_terser@5.39.0_picomatch@4.0.2"
       ]
     },
     "web-namespaces@2.0.1": {
@@ -3355,13 +3355,13 @@
         "npm:@fontsource/atkinson-hyperlegible-next@^5.2.1",
         "npm:@fontsource/metropolis@^5.2.5",
         "npm:@fontsource/space-mono@^5.2.5",
-        "npm:@iconify-json/material-symbols@^1.2.19",
+        "npm:@iconify-json/material-symbols@^1.2.20",
         "npm:@iconify-json/simple-icons@^1.2.32",
         "npm:@playform/compress@~0.1.9",
         "npm:@tailwindcss/vite@^4.1.4",
         "npm:astro-icon@^1.1.5",
-        "npm:astro@^5.7.2",
-        "npm:daisyui@^5.0.23",
+        "npm:astro@^5.7.4",
+        "npm:daisyui@^5.0.27",
         "npm:sharp@~0.34.1",
         "npm:tailwindcss@^4.1.4"
       ]
