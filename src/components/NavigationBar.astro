@@ -74,22 +74,20 @@ const currentPath = Astro.url.pathname;
             }
         </div>
         <div class="justify-self-end">
-            <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden hover:bg-gray-200/30 p-6">
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden hover:bg-gray-200/30 focus-within:bg-gray-200/30 focus-active:bg-gray-200/30 active:bg-gray-200/30 px-4 py-8 m-2 border-none">
                     <Icon name="material-symbols:menu" width="2.5em" height="2.5em" />
                 </div>
                 <ul
                     tabindex="0"
-                    class="menu menu-md dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a>Item 1</a></li>
-                    <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
-                    </ul>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    class="menu menu-lg dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    {
+                        leftNavItems.concat(rightNavItems).map((item) => (
+                            <li>
+                                <a href={item.href}>{item.title}</a>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
         </div>
