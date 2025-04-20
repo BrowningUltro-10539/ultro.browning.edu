@@ -39,6 +39,27 @@ The image assets in this repository, located under `public/**` and `src/assets/*
 ## Copyright
 Copyright © Ultro Robotics
 
+# Development
+Install dependencies:
+```bash
+deno i
+```
+
+Run development server:
+```bash
+deno run dev
+```
+
+Build site pages (located in `dist/`):
+```bash
+deno run build
+```
+
+Preview built site:
+```bash
+deno run preview
+```
+
 # TODO
 - [ ] finish building content pages
 - [ ] convert navbar to use CSS scroll-driven animations instead of JS
