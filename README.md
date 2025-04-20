@@ -65,7 +65,7 @@ deno run preview
 - [ ] convert navbar to use CSS scroll-driven animations instead of JS
 - [x] footer
 - [ ] replace logos with transparent SVG assets
-- [ ] mobile support
+- [x] ~~mobile support~~ (sort of)
 - [ ] View Transition API
 - [ ] accessibility: respect reduced motion, etc..
 - [ ] make this website as fast as humanly possible
