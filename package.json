@@ -9,20 +9,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.3.0",
-    "@fontsource/atkinson-hyperlegible-next": "^5.2.1",
+    "@astrojs/sitemap": "^3.4.1",
+    "@fontsource/atkinson-hyperlegible-next": "^5.2.5",
     "@fontsource/metropolis": "^5.2.5",
-    "@fontsource/space-mono": "^5.2.5",
-    "@iconify-json/simple-icons": "^1.2.32",
-    "@tailwindcss/vite": "^4.1.4",
-    "astro": "^5.7.4",
+    "@fontsource/space-mono": "^5.2.8",
+    "@iconify-json/simple-icons": "^1.2.42",
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.11.0",
     "astro-icon": "^1.1.5",
-    "daisyui": "^5.0.27",
-    "sharp": "^0.34.1",
-    "tailwindcss": "^4.1.4"
+    "daisyui": "^5.0.46",
+    "sharp": "^0.34.2",
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
-    "@iconify-json/material-symbols": "^1.2.20",
-    "@playform/compress": "^0.1.9"
+    "@iconify-json/material-symbols": "^1.2.29",
+    "@playform/compress": "^0.2.0"
   }
 }
